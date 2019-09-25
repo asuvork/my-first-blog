@@ -3,6 +3,7 @@ from celery import shared_task
 
 from blog.models import Post
 from django.contrib.auth.models import User
+from mysite.celery import app
 
 @shared_task
 def addPost():

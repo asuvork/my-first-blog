@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
-#    'django_celery_results',
+    'django_celery_results',
 #    'django_celery_beat',
 ]
 
@@ -129,9 +129,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # becomes `proj.celery.schedules` in Python 2.x since it allows
 # for relative imports by default.
 
-#CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
-#CELERY_ACCEPT_CONTENT = ['json']
-#CELERY_TASK_SERIALIZER = 'json'
-#CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+#CELERY_BROKER_URL = 'redis://localhost/0'
+CELERY_ACCEPT_CONTENT = ['json']
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'django-db'
+#CELERY_RESULT_BACKEND = 'redis://localhost/0'
 #CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
 #CELERY_CACHE_BACKEND = 'django-cache'
