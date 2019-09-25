@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/2.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/2.2/ref/settings/
 """
-
+from __future__ import absolute_import, unicode_literals
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog',
+#    'django_celery_results',
+#    'django_celery_beat',
 ]
 
 MIDDLEWARE = [
@@ -120,3 +122,16 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Celery settings
+# ^^^ The above is required if you want to import from the celery
+# library.  If you don't have this then `from celery.schedules import`
+# becomes `proj.celery.schedules` in Python 2.x since it allows
+# for relative imports by default.
+
+#CELERY_BROKER_URL = 'amqp://guest:guest@localhost//'
+#CELERY_ACCEPT_CONTENT = ['json']
+#CELERY_TASK_SERIALIZER = 'json'
+#CELERY_RESULT_BACKEND = 'django-db'
+#CELERY_RESULT_BACKEND = 'db+sqlite:///results.sqlite'
+#CELERY_CACHE_BACKEND = 'django-cache'
