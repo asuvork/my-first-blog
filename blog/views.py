@@ -4,12 +4,21 @@ from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from .models import Post, Comment
 from .forms import PostForm, CommentForm
+from django.core.paginator import Paginator
 
 
 # Create your views here.
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
-    return render(request, 'blog/post_list.html', {'posts': posts})
+    paginator = Paginator(posts, 5) # Show 5 posts per page
+    
+    if request.method == 'GET':
+        if 'page' in request.GET:
+            page = request.GET.get('page')
+        else:
+            page = 1
+    posts_on_page = paginator.get_page(page)
+    return render(request, 'blog/post_list.html', {'posts': posts_on_page})
     
     
 def post_detail(request, pk):
@@ -50,7 +59,17 @@ def post_edit(request, pk):
 @login_required
 def post_draft_list(request):
     posts = Post.objects.filter(published_date__isnull=True).order_by('created_date')
-    return render(request, 'blog/post_draft_list.html', {'posts': posts})
+    
+    paginator = Paginator(posts, 5) # Show 5 posts per page
+    
+    if request.method == 'GET':
+        if 'page' in request.GET:
+            page = request.GET.get('page')
+        else:
+            page = 1
+    posts_on_page = paginator.get_page(page)
+    
+    return render(request, 'blog/post_draft_list.html', {'posts': posts_on_page})
     
     
 @login_required
