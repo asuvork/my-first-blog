@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'blog',
     'senddata',
+    'core',
     'django_celery_results',
     'django_celery_beat',
 	'corsheaders',

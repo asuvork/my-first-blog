@@ -1,0 +1,50 @@
+<div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'mbh' %}">
+                <i class="nav-icon fa fa-sitemap"></i> MBH Nodes</a>
+            </li>
+            <li class="nav-title">MR INFO</li>
+            {% for info_kind, info_types in menu_info.items %}
+                {% if info_types|length > 1 and info_kind.label != "Other" %}
+                  <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                      <i class="nav-icon {{ info_kind.icon }}"></i> {{ info_kind }}</a>
+                    <ul class="nav-dropdown-items">
+                {% endif %}
+                  {% for info_type in info_types %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'info' info_kind=info_kind.url_name info_type=info_type.url_name %}">
+                            <i class="nav-icon fa fa-file-excel-o"></i> {{ info_type }}
+                        </a>
+                      </li>
+                  {% endfor %} 
+                {% if info_types|length > 1 and info_kind.label != "Other" %}
+                    </ul>
+                  </li>
+                {% endif %}
+            {% endfor %}  
+            <li class="nav-title">Reports</li>
+            {% for report_kind, report_types in menu_reports.items %}
+                {% if report_types|length > 1 and report_kind.label != "Other" %}
+                  <li class="nav-item nav-dropdown">
+                    <a class="nav-link nav-dropdown-toggle" href="#">
+                      <i class="nav-icon {{ report_kind.icon }}"></i> {{ report_kind }}</a>
+                    <ul class="nav-dropdown-items">
+                {% endif %}
+                  {% for report_type in report_types %}
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'report' report_kind=report_kind.url_name report_type=report_type.url_name %}">
+                            <i class="nav-icon fa fa-file-excel-o"></i> {{ report_type }}
+                        </a>
+                      </li>
+                  {% endfor %} 
+                {% if report_types|length > 1 and report_kind.label != "Other" %}
+                    </ul>
+                  </li>
+                {% endif %}
+            {% endfor %}  
+          </ul>
+        </nav>
+      </div>

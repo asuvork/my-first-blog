@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.1.15
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>МТС КДС | Huawei | Reports | QoS UNI IFACE</title>
+    <!-- Icons-->
+    <link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet">
+    
+  </head>
+  <body class="app header-fixed sidebar-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">MBH Nodes</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Reports</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <span class=""></span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link d-sm-none px-2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="nav-icon fa fa-globe fa-lg"></i>  ДВ </a>
+          <a class="nav-link d-down-none px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="nav-icon fa fa-globe fa-lg"></i>  Дальний Восток </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>MBH Восток</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Урал
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Сибирь
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Дальний восток
+            </a>
+            <div class="dropdown-header text-center">
+              <strong>MBH Запад</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Юг</a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Поволжье</a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Северо-Запад
+            </a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-sitemap"></i> MBH Nodes</a>
+            </li>
+            <li class="nav-title">MR INFO</li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-table"></i> VRF</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-table"></i> VLL</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon fa fa-arrows"></i> BGP</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link active" href="vendor.html">
+                    <i class="nav-icon fa fa-table"></i> ALL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> MSN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> Other</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> iBGP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> XRING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> СПД ДМиИС</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-title">Reports</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> QoS</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS UNI IFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS NNI IFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS UNI SubIFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS NNI SubIFACE</a>
+                </li>
+                <li class="nav-item">
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> VRF</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> VRF Reports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> VRF Routes Target</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon fa fa-exchange"></i> Ports</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> GE ports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> XE ports</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-file-excel-o"></i> MTU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-file-excel-o"></i> ISIS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item ">
+            <a href="#"> 
+              Huawei 
+            </a>
+          </li>
+          <li class="breadcrumb-item "> 
+            <a href="#">
+              Reports
+            </a>
+          </li>
+          <li class="breadcrumb-item active">
+              QoS UNI IFACE 
+          </li>
+          <!-- Breadcrumb Menu-->
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-sm-12 col-xl-12">
+                <div class="card">
+                  <div class="chart-wrapper">
+                    <canvas id="myChart" width="600" height="300"></canvas>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Reports
+                    <small>Huawei</small>
+                  </div>
+                  <div class="card-body">
+                    <div class="container-fluid">
+                      <table class="table table-striped table-sm" id="table"
+                        data-toggle="table"
+                        data-pagination="true"
+                        data-search="true"
+                        data-page-size="10"
+                        data-sortable="true"
+                        data-sort-name="id"
+                        data-sort-order="desc">
+                        <thead class = "thead-light">
+                          <tr>
+                            <th data-field="id" data-sortable="true" data-width="33" data-width-unit="px">#</th>
+                            <th data-field="report" data-sortable="true">Отчет</th>
+                            <th data-field="link" data-sortable="true" data-width="75" data-width-unit="px">Ссылка</th>
+                            <th data-field="time" data-sortable="true" data-width="137" data-width-unit="px">Время создания</th>
+                            <th data-field="amount" data-sortable="true" data-width="105" data-width-unit="px">Всего строк</th>
+                            <th data-field="inconsistencies" data-sortable="true" data-width="215" data-width-unit="px">Количество несоответствий</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td data-field="id">2</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">1</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_093105</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">0</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="report">QoS UNI IFACE Report 20190110_081839</td>
+                              <td data-field="link">
+                                <a class="btn btn-warning btn-sm" href="#" role="button"> FTP </a>
+                              </td>
+                              <td data-field="time">60000000</td>
+                              <td data-field="amount">16531896</td>
+                              <td data-field="inconsistencies">30</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="#">КДС</a>
+        <span>&copy; 2019 ДАКС.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/pace-progress/pace.min.js"></script>
+    <script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="../node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+    <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+    <script>
+        jQuery(document).ready(function() {
+            var ctx = document.getElementById('myChart').getContext('2d');
+            var chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['2019-01-10','2019-01-10','2019-01-11','2019-01-14','2019-01-15','2019-01-16','2019-01-17','2019-01-18','2019-02-03','2019-02-03','2019-02-03','2019-02-13','2019-02-13','2019-02-13','2019-02-13','2019-02-13','2019-02-13','2019-02-14','2019-02-14','2019-02-16','2019-02-16','2019-02-19','2019-02-19','2019-02-19','2019-02-20','2019-02-21','2019-02-21','2019-02-22','2019-02-23','2019-02-24','2019-03-05','2019-03-18','2019-03-18','2019-03-19','2019-03-19','2019-03-20','2019-03-21','2019-03-22','2019-03-26','2019-03-26','2019-03-26','2019-03-28','2019-03-28','2019-04-05','2019-04-05','2019-04-05','2019-04-05','2019-04-05','2019-04-06','2019-04-07','2019-04-08','2019-04-10','2019-04-10','2019-04-11','2019-04-12','2019-04-13','2019-04-16','2019-04-20','2019-04-20','2019-04-20','2019-04-21','2019-04-22','2019-04-23','2019-04-24','2019-04-24','2019-04-25','2019-04-26','2019-04-27','2019-04-28','2019-04-29','2019-05-07','2019-05-08','2019-05-13','2019-05-15','2019-05-16','2019-05-16','2019-05-17','2019-05-18','2019-05-19','2019-05-20','2019-05-21','2019-05-22','2019-05-23','2019-05-24','2019-06-04','2019-06-05','2019-06-13','2019-06-14','2019-06-15','2019-06-16','2019-06-17','2019-06-17','2019-06-17','2019-06-17','2019-06-17','2019-06-17','2019-06-18','2019-06-20','2019-07-04','2019-07-04','2019-07-04','2019-07-04','2019-07-09','2019-07-09','2019-07-11','2019-07-14','2019-07-18','2019-07-24','2019-07-31','2019-08-02','2019-08-13','2019-08-20','2019-08-21','2019-08-29','2019-09-04','2019-09-04','2019-09-05','2019-09-06','2019-09-06','2019-09-08','2019-09-09','2019-09-10','2019-09-11','2019-09-11','2019-09-11','2019-09-11','2019-09-11','2019-09-11','2019-09-11','2019-09-12','2019-09-13','2019-09-16','2019-09-18','2019-09-20',],
+                    datasets:  [
+                        {
+                            label: 'Количество несоответствий',
+                            backgroundColor: 'rgba(220, 220, 220, 0.2)',
+                            borderColor: 'green',
+                            pointBackgroundColor: 'green',
+                            data: ['20970','20970','21496','21501','21501','21503','21504','21504','21505','21505','21400','21505','21505','21400','21400','21400','21505','21378','21378','21728','21728','21728','21728','21738','21738','21738','21738','21746','21766','21766','21766','21766','21766','22886','22916','22916','22916','22909','14455','14455','22784','22784','22784','22837','22837','22837','22837','22837','22784','22784','22784','22784','22784','22712','22712','21871','22664','22748','22748','22748','7577','7891','7778','9908','9908','22794','22850','22858','22876','22876','23084','23126','23142','15122','21541','21541','21268','19429','4390','4390','21493','20427','21552','21543','8218','15078','23250','23250','23091','23274','23122','23122','23122','23122','23122','23122','23259','23268','23226','23226','23226','23508','17926','18048','23480','18555','18555','23412','23410','23609','23414','23410','23473','23482','23031','23027','23027','23027','23027','22986','22988','22988','22992','22992','22992','22992','22992','22990','22990','22995','23045','23045','23635','24185',]
+                        },
+                    ]
+                },
+                options: {}
+            });
+        });
+    </script>
+  </body>
+</html>

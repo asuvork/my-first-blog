@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<!--
+* CoreUI - Free Bootstrap Admin Template
+* @version v2.1.15
+* @link https://coreui.io
+* Copyright (c) 2018 creativeLabs Łukasz Holeczek
+* Licensed under MIT (https://coreui.io/license)
+-->
+
+<html lang="en">
+  <head>
+    <base href="./">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
+    <meta name="author" content="Łukasz Holeczek">
+    <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <title>МТС КДС | Huawei | Reports </title>
+    <!-- Icons-->
+    <link href="../node_modules/@coreui/icons/css/coreui-icons.min.css" rel="stylesheet">
+    <link href="../node_modules/flag-icon-css/css/flag-icon.min.css" rel="stylesheet">
+    <link href="../node_modules/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../node_modules/simple-line-icons/css/simple-line-icons.css" rel="stylesheet">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- Main styles for this application-->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="vendors/pace-progress/css/pace.min.css" rel="stylesheet">
+    <link href="../node_modules/bootstrap-table/dist/bootstrap-table.min.css" rel="stylesheet">
+  </head>
+  <body class="app header-fixed sidebar-fixed sidebar-lg-show">
+    <header class="app-header navbar">
+      <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img class="navbar-brand-full" src="img/brand/logo.svg" width="89" height="25" alt="CoreUI Logo">
+      </a>
+      <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <ul class="nav navbar-nav d-md-down-none">
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">MBH Nodes</a>
+        </li>
+        <li class="nav-item px-3">
+          <a class="nav-link" href="#">Reports</a>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <span class=""></span>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link d-sm-none px-2" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="nav-icon fa fa-globe fa-lg"></i>  ДВ </a>
+          <a class="nav-link d-down-none px-3" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="nav-icon fa fa-globe fa-lg"></i>  Дальний Восток </a>
+          <div class="dropdown-menu dropdown-menu-right">
+            <div class="dropdown-header text-center">
+              <strong>MBH Восток</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Урал
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Сибирь
+            </a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Дальний восток
+            </a>
+            <div class="dropdown-header text-center">
+              <strong>MBH Запад</strong>
+            </div>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Юг</a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Поволжье</a>
+            <a class="dropdown-item" href="#">
+              <i class="icon-location-pin"></i> Северо-Запад
+            </a>
+          </div>
+        </li>
+      </ul>
+
+    </header>
+    <div class="app-body">
+      <div class="sidebar">
+        <nav class="sidebar-nav">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-sitemap"></i> MBH Nodes</a>
+            </li>
+            <li class="nav-title">MR INFO</li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-table"></i> VRF</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-table"></i> VLL</a>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon fa fa-arrows"></i> BGP</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link active" href="vendor.html">
+                    <i class="nav-icon fa fa-table"></i> ALL</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> MSN</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> Other</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> iBGP</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> XRING</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-table"></i> СПД ДМиИС</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-title">Reports</li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-puzzle"></i> QoS</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS UNI IFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS NNI IFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS UNI SubIFACE</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> QoS NNI SubIFACE</a>
+                </li>
+                <li class="nav-item">
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon icon-cursor"></i> VRF</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> VRF Reports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> VRF Routes Target</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item nav-dropdown">
+              <a class="nav-link nav-dropdown-toggle" href="#">
+                <i class="nav-icon fa fa-exchange"></i> Ports</a>
+              <ul class="nav-dropdown-items">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> GE ports</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">
+                    <i class="nav-icon fa fa-file-excel-o"></i> XE ports</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-file-excel-o"></i> MTU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="nav-icon fa fa-file-excel-o"></i> ISIS</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="#">
+              Huawei
+            </a>
+          </li>
+          <li class="breadcrumb-item active">
+              Reports
+          </li>
+          <!-- Breadcrumb Menu-->
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-sm-12 col-xl-12">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-align-justify"></i> Reports
+                    <small>Huawei</small>
+                  </div>
+                  <div class="card-body">
+                    <div class="container-fluid">
+                      <table class="table table-striped" id="table"
+                        data-toggle="table"
+                        data-pagination="true"
+                        data-search="true"
+                        data-page-size="3"
+                        data-sortable="true"
+                        data-sort-name="id"
+                        data-sort-order="asc">
+                        <thead class = "thead-light">
+                          <tr>
+                            <th data-field="id" data-sortable="true" data-width="10" data-width-unit="px">#</th>
+                            <th data-field="name" data-sortable="true" data-width="30" data-width-unit="%">Отчет</th>
+                            <th data-field="description" data-sortable="true" data-width="70" data-width-unit="%">Описание</th>
+                            <th data-field="link" data-sortable="true" data-width="120" data-width-unit="px">Ссылка</th>
+                            <th data-field="start_date" data-sortable="true" data-width="50" data-width-unit="px">Последний запуск</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                              <td data-field="id">0</td>
+                              <td data-field="name">Huawei VRF Report</td>
+                              <td data-field="description">Отчет о наличии команды apply label per-route в VRF</td>
+                              <td data-field="link">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a class="btn btn-warning" href="#" role="button"> FTP</a>
+                                  <a class="btn btn-primary" href="#" role="button"> WEB</a>
+                                </div>
+                              </td>
+                              <td data-field="start_date">2019-09-20 06:43:28</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">1</td>
+                              <td data-field="name">Huawei QoS SUBIFACE NNI</td>
+                              <td data-field="description">Настройка QoS на SUBIFACE NNI MBH Huawei</td>
+                              <td data-field="link">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a class="btn btn-warning" href="#" role="button"> FTP</a>
+                                  <a class="btn btn-primary" href="#" role="button"> WEB</a>
+                                </div>
+                              </td>
+                              <td data-field="start_date">2019-09-20 06:43:28</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">2</td>
+                              <td data-field="name">Huawei QoS IFACE NNI</td>
+                              <td data-field="description">Настройка QoS на IFACE NNI MBH Huawei</td>
+                              <td data-field="link">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a class="btn btn-warning" href="#" role="button"> FTP</a>
+                                  <a class="btn btn-primary" href="#" role="button"> WEB</a>
+                                </div>
+                              </td>
+                              <td data-field="start_date">2019-09-20 06:43:29</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">3</td>
+                              <td data-field="name">Huawei ISIS</td>
+                              <td data-field="description">Отчет по соответствию ISIS шаблону</td>
+                              <td data-field="link">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a class="btn btn-warning" href="#" role="button"> FTP</a>
+                                  <a class="btn btn-primary" href="#" role="button"> WEB</a>
+                                </div>
+                              </td>
+                              <td data-field="start_date">2019-09-20 06:45:26</td>
+                          </tr>
+                          <tr>
+                              <td data-field="id">4</td>
+                              <td data-field="name">Huawei QoS UNI IFACE</td>
+                              <td data-field="description">Отчет настройки QoS на UNI порту</td>
+                              <td data-field="link">
+                                <div class="btn-group" role="group" aria-label="Basic example">
+                                  <a class="btn btn-warning" href="#" role="button"> FTP</a>
+                                  <a class="btn btn-primary" href="#" role="button"> WEB</a>
+                                </div>
+                              </td>
+                              <td data-field="start_date">2019-09-20 06:45:26</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-12 col-xl-12">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="container-fluid">
+                      <table class="table table-striped" id="table"
+                        data-toggle="table"
+                        data-url="http://127.0.0.1:8000/getdata"
+                        #data-url="https://examples.wenzhixin.net.cn/examples/bootstrap_table/data"
+                        #data-url="http://totoshick.pythonanywhere.com/getdata"
+                        data-search="true"
+                        data-pagination="true"
+                        data-page-size="3"
+                        data-side-pagination="server">
+                        <thead class = "thead-light">
+                          <tr>
+                            <th data-field="id" data-sortable="true" data-width="10" data-width-unit="px">#</th>
+                            <th data-field="name" data-sortable="true" data-width="30" data-width-unit="%">Отчет</th>
+                            <th data-field="description" data-sortable="true" data-width="70" data-width-unit="%">Описание</th>
+                            <th data-field="link" data-sortable="true" data-width="120" data-width-unit="px">Ссылка</th>
+                            <th data-field="start_date" data-sortable="true" data-width="50" data-width-unit="px">Последний запуск</th>
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+    <footer class="app-footer">
+      <div>
+        <a href="#">КДС</a>
+        <span>&copy; 2019 ДАКС.</span>
+      </div>
+      <div class="ml-auto">
+        <span>Powered by</span>
+        <a href="https://coreui.io">CoreUI</a>
+      </div>
+    </footer>
+    <!-- CoreUI and necessary plugins-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/pace-progress/pace.min.js"></script>
+    <script src="../node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js"></script>
+    <script src="../node_modules/@coreui/coreui/dist/js/coreui.min.js"></script>
+    <script src="../node_modules/bootstrap-table/dist/bootstrap-table.min.js"></script>
+  </body>
+</html>

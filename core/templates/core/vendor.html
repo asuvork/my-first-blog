@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}  
+  <body class="app header-fixed sidebar-fixed sidebar-lg-show">
+    <div class="app-body">
+      {% include "core/menu_vendor.html" %}
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item active">
+              Huawei
+          </li>
+          <!-- Breadcrumb Menu-->
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-sm-12 col-md-8">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-table"></i> Information
+                  </div>
+                  <div class="card-body">
+                  <h6>2019-09-23 20:00:00</h6>
+                    <p class="card-text">время последнего запуска сбора информации</p>
+                    <p class="card-text"><a href="{% url 'mbh' %}" class="btn btn-primary">К списку узлов</a></p>
+                    <p class="card-text">Информация о сети: </p>
+                    <div class="list-group">
+                      {% for info_kind, info_types in menu_info.items %}
+                        {% for info_type in info_types %}
+                          <a class="list-group-item list-group-item-action" href="{{ info_type.url_web }}">{{ info_type }}</a>
+                        {% endfor %}
+                      {% endfor %}  
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-4">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-file-excel-o"></i> Reports
+                  </div>
+                  <div class="card-body">
+                    <h6>2019-09-23 20:00:00</h6>
+                    <p class="card-text">время последнего запуска генерации отчетов</p>
+                    <a href="{% url 'reports' %}" class="btn btn-primary">К списку отчетов</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+{% endblock %}

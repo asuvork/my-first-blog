@@ -22,6 +22,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/login/', views.LoginView.as_view(), name='login'),
     path('accounts/logout/', views.LogoutView.as_view(next_page='/'), name='logout'),
-    path('getdata', include('senddata.urls')),
+    path('getdata/', include('senddata.urls')),
+    path('core/', include('core.urls')),
     path('', include('blog.urls'))
 ]

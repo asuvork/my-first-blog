@@ -1,0 +1,63 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+
+{% block content %}  
+  <body class="app header-fixed sidebar-fixed sidebar-lg-show">
+    <div class="app-body">
+      {% include "core/menu_vendor.html" %}
+      <main class="main">
+        <!-- Breadcrumb-->
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li class="breadcrumb-item">
+            <a href="{% url 'vendor' %}">
+              Huawei
+            </a>
+          </li>
+          <li class="breadcrumb-item active">
+            MBH Nodes
+          </li>
+          <!-- Breadcrumb Menu-->
+        </ol>
+        <div class="container-fluid">
+          <div class="animated fadeIn">
+            <div class="row">
+              <div class="col-sm-12 col-md-12">
+                <div class="card">
+                  <div class="card-header">
+                    <i class="fa fa-sitemap"></i> Devices
+                  </div>
+                  <div class="card-body">
+                    <div class="container-fluid">
+                      <table class="table table-striped table-sm" id="table"
+                        data-toggle="table"
+                        data-url="{{ data_source }}"
+                        data-search="true"
+                        data-pagination="true"
+                        data-page-size="50"
+                        data-page-list="[10, 25, 50, 100, all]"
+                        data-side-pagination="server">
+                        <thead class = "thead-light">
+                          <tr>
+                            {% for data, name in columns.items %}
+                              <th data-field="{{ data }}" data-sortable="true">{{ name }}</th>
+                            {% endfor %}
+                          </tr>
+                        </thead>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+{% endblock %}
